@@ -53,12 +53,12 @@ function Home() {
   return (
     <Layout>
     <div className='flex items-center justify-center relative w-80 mb-4'> 
-       <h1 className='font-medium text-xl'>Exclusive Products</h1>
+       <h1 className='font-medium text-xl mt-20'>Exclusive Products</h1>
      </div>
      <input
       type="text"
       placeholder='Search a product'
-      className='rounded-lg border border-black w-80 p-4 mb-4 focus:outline-none'
+      className='rounded-lg border border-violet-500 w-80 p-4 mb-4 focus:outline-none  shadow-[10px_10px_0px_0px_rgba(109,40,217)] border-solid'
       onChange={(event) => context.setSearchByTitle(event.target.value)}  />
       <div className='grid gap-2 grid-cols-3 w-full max-w-screen-lg justify-center'>
         {renderView()}

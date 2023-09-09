@@ -5,17 +5,17 @@ import { ShoppingCartContext } from '../../Context'
 
 const Navbar = () => {
   const context = useContext(ShoppingCartContext)
-  const activeStyle = 'underline underline-offset-4'
+  const activeStyle = 'underline underline-offset-8 decoration-violet-700'
 
   return (
-    <nav className='flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 text-sm font-light'>
+    <nav className='flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 text-sm font-light shadow-[10px_10px_0px_0px_rgba(109,40,217)] border-solid border-4 bg-white'>
       <ul className='flex items-center gap-3'>
-        <li className='font-semibold text-lg'>
+        <li className='font-semibold text-4xl text-violet-700'>
           <NavLink to='/'>
             Shopi
           </NavLink>
         </li>
-        <li>
+        <li className=' bg-slate-100 hover:bg-violet-300 border-double border-4 border-indigo-600 p-2 rounded'>
           <NavLink
             to='/'
             onClick={() => context.setSearchByCategory()}
@@ -25,7 +25,7 @@ const Navbar = () => {
             All
           </NavLink>
         </li>
-        <li>
+        <li className=' bg-slate-100 hover:bg-violet-300 border-double border-4 border-indigo-600 p-2 rounded'>
           <NavLink
             to='/clothing'
             onClick={() => context.setSearchByCategory('clothing')}
@@ -36,7 +36,7 @@ const Navbar = () => {
           </NavLink>
         </li>
         
-        <li>
+        <li className=' bg-slate-100 hover:bg-violet-300 border-double border-4 border-indigo-600 p-2 rounded'>
           <NavLink
             to='/jewelery'
             onClick={() => context.setSearchByCategory('jewelery')}
@@ -46,7 +46,7 @@ const Navbar = () => {
            Jewelery
           </NavLink>
         </li>
-        <li>
+        <li className=' bg-slate-100 hover:bg-violet-300 border-double border-4 border-indigo-600 p-2 rounded'>
           <NavLink
             to='/electronics'
             onClick={() => context.setSearchByCategory('electronics')}
@@ -56,7 +56,7 @@ const Navbar = () => {
             Electronics
           </NavLink>
         </li>
-        <li>
+        <li className=' bg-slate-100 hover:bg-violet-300 border-double border-4 border-indigo-600 p-2 rounded'>
           <NavLink
             to='/others'
             onClick={() => context.setSearchByCategory('others')}
@@ -68,10 +68,10 @@ const Navbar = () => {
         </li>
       </ul>
       <ul className='flex items-center gap-3'>
-        <li className='text-black/60'>
+        <li className='text-black/60 '>
           jhondoe@gmail.com
         </li>
-        <li>
+        <li className=' bg-slate-100 hover:bg-violet-300 border-double border-4 border-indigo-600 p-2 rounded'>
           <NavLink
             to='/my-orders'
             className={({ isActive }) =>
@@ -80,7 +80,7 @@ const Navbar = () => {
             My Orders
           </NavLink>
         </li>
-        <li>
+        <li className=' bg-slate-100 hover:bg-violet-300 border-double border-4 border-indigo-600 p-2 rounded'>
           <NavLink
             to='/my-account'
             className={({ isActive }) =>
@@ -89,7 +89,7 @@ const Navbar = () => {
             My Account
           </NavLink>
         </li>
-        <li>
+        <li className=' bg-slate-100 hover:bg-violet-300 border-double border-4 border-indigo-600 p-2 rounded'>
           <NavLink
             to='/sing-in'
             className={({ isActive }) =>
