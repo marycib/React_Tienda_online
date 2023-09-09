@@ -10,7 +10,9 @@ function MyOrders() {
  // console.log('CART: ', context.order)
   return (
     <Layout>
-      <div className='flex items-center justify-center relative w-80 mb-4'>
+      <div className='flex items-center justify-center relative w-80 mb-4 mt-32  
+      rounded-lg border border-violet-500 p-4 focus:outline-none
+          shadow-[5px_5px_0px_0px_rgba(109,40,217)] border-solid'>
        
         <h1 className='font-medium text-xl'>My Orders</h1>
       </div>

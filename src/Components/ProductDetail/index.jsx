@@ -9,7 +9,7 @@ const ProductDetail = () => {
   return (
     <aside
       className={`${context.isProductDetailOpen ? 'flex' : 'hidden'} 
-      product-detail flex-col fixed right-0 border border-black rounded-lg bg-white`}>
+      product-detail flex-col fixed bottom-0.5 right-0 border border-black rounded-lg bg-white mt-9`}>
       <div className='flex justify-between items-center p-6'>
         <h2 className='font-medium text-xl'>Detail</h2>
         <div>
@@ -20,7 +20,7 @@ const ProductDetail = () => {
       </div>
       <figure className='px-6'>
         <img
-          className='w-full h-full rounded-lg'
+          className='w-4/5 h-full rounded-lg'
           src={context.productToShow.image}
           alt={context.productToShow.title} />
       </figure>
