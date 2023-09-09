@@ -18,6 +18,7 @@ const Navbar = () => {
         <li>
           <NavLink
             to='/'
+            onClick={() => context.setSearchByCategory()}
             className={({ isActive }) =>
               isActive ? activeStyle : undefined
             }>
@@ -26,16 +27,29 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink
-            to='/clothes'
+            to='/clothing'
+            onClick={() => context.setSearchByCategory('clothing')}
             className={({ isActive }) =>
               isActive ? activeStyle : undefined
             }>
-            Clothes
+       Clothing
+          </NavLink>
+        </li>
+        
+        <li>
+          <NavLink
+            to='/jewelery'
+            onClick={() => context.setSearchByCategory('jewelery')}
+            className={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            }>
+           Jewelery
           </NavLink>
         </li>
         <li>
           <NavLink
             to='/electronics'
+            onClick={() => context.setSearchByCategory('electronics')}
             className={({ isActive }) =>
               isActive ? activeStyle : undefined
             }>
@@ -44,25 +58,8 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink
-            to='/furnitures'
-            className={({ isActive }) =>
-              isActive ? activeStyle : undefined
-            }>
-            Furnitures
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to='/toys'
-            className={({ isActive }) =>
-              isActive ? activeStyle : undefined
-            }>
-            Toys
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
             to='/others'
+            onClick={() => context.setSearchByCategory('others')}
             className={({ isActive }) =>
               isActive ? activeStyle : undefined
             }>
@@ -103,7 +100,7 @@ const Navbar = () => {
         </li>
         <li className='flex items-center'>
           <ShoppingBagIcon className='h-6 w-6 text-black'></ShoppingBagIcon>
-          <div>{context.count}</div>
+          <div>{context.cartProducts.length}</div>
         </li>
       </ul>
     </nav>
